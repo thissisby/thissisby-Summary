@@ -89,7 +89,7 @@ export default function Home() {
             
             {/* Parallax elements */}
             <div className="id-photo-wrapper">
-              <img src="/bhanu.png" alt={developerInfo.name} className="id-photo" loading="lazy" />
+              <img src={process.env.PUBLIC_URL + '/bhanu.png'} alt={developerInfo.name} className="id-photo" loading="lazy" />
             </div>
 
             <h2 className="id-name">{developerInfo.name}</h2>

@@ -65,7 +65,7 @@ export default function App() {
             <div className="chat-header">
               <div className="chat-user-info">
                 <div className="chat-avatar-wrapper">
-                  <img src="/bhanu.png" alt="Bhanu Yadav" className="chat-avatar" />
+                  <img src={process.env.PUBLIC_URL + '/bhanu.png'} alt="Bhanu Yadav" className="chat-avatar" />
                   <span className="online-indicator"></span>
                 </div>
                 <div className="chat-title-group">
