@@ -1,0 +1,157 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #ffffff;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(74, 124, 89, 0.08);
+}
+
+.nav-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-box {
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+.logo-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.logo-title {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+  background-color: rgba(74, 124, 89, 0.04);
+}
+
+.nav-links a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background-color: var(--accent);
+  border-radius: 1px;
+}
+
+/* Mobile Toggle */
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-primary);
+  margin: 3px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle.open .line-1 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.nav-toggle.open .line-2 {
+  opacity: 0;
+}
+
+.nav-toggle.open .line-3 {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(74, 124, 89, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  gap: 16px;
+  z-index: 999;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.02);
+}
+
+.mobile-menu a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+}

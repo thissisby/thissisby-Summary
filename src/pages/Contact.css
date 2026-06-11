@@ -1,0 +1,238 @@
+/* ==========================================================================
+   CONTACT SECTION BACKGROUND & OVERLAYS
+   ========================================================================== */
+.contact-wrapper-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5fcf8 0%, #e8f5ed 50%, #f4fbf7 100%);
+  background-size: 200% 200%;
+  animation: contactBgShift 15s ease infinite;
+  z-index: 1;
+}
+
+@keyframes contactBgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating Animated Colorful Blobs */
+.contact-blob1 {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(162, 222, 208, 0.35) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: contactFloat1 15s ease-in-out infiniteAlternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.contact-blob2 {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(238, 204, 218, 0.32) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: contactFloat2 18s ease-in-out infiniteAlternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.contact-blob3 {
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(188, 224, 253, 0.28) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: contactFloat3 12s ease-in-out infiniteAlternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes contactFloat1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -20px) scale(1.08); }
+  100% { transform: translate(-10px, 10px) scale(0.95); }
+}
+
+@keyframes contactFloat2 {
+  0% { transform: translate(0, 0) scale(0.95); }
+  50% { transform: translate(-40px, 30px) scale(1.1); }
+  100% { transform: translate(10px, -10px) scale(1); }
+}
+
+@keyframes contactFloat3 {
+  0% { transform: translate(0, 0) scale(1.05); }
+  50% { transform: translate(25px, 25px) scale(0.92); }
+  100% { transform: translate(-20px, -20px) scale(1); }
+}
+
+/* ==========================================================================
+   CARD LAYOUT STRUCTURE
+   ========================================================================== */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.contact-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 56px 32px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(74, 124, 89, 0.15);
+  box-shadow: 0 15px 35px rgba(74, 124, 89, 0.08);
+}
+
+.contact-prompt {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary); /* Forest charcoal text color */
+}
+
+.contact-sub {
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 460px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   EMAIL BOX AND CLIPBOARD
+   ========================================================================== */
+.email-copy-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: rgba(74, 124, 89, 0.05);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 12px 0;
+  max-width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+}
+
+.email-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary); /* Fully visible text */
+  word-break: break-all;
+}
+
+.copy-action-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.btn-copy {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-copy:hover {
+  background-color: #3b6347;
+  transform: scale(1.02);
+}
+
+.copied-toast {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--text-primary);
+  border: 1px solid var(--accent);
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(74, 124, 89, 0.15);
+}
+
+/* ==========================================================================
+   SOCIAL BUTTONS AND ACTIONS
+   ========================================================================== */
+.contact-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.contact-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  border: 1px solid rgba(74, 124, 89, 0.15);
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+/* Specific Brand Hover Animations */
+.contact-link-btn.linkedin-btn:hover {
+  border-color: #0077b5;
+  background-color: rgba(0, 119, 181, 0.06);
+  color: #0077b5;
+  transform: translateY(-2px);
+}
+
+.contact-link-btn.github-btn:hover {
+  border-color: #24292e;
+  background-color: rgba(36, 41, 46, 0.06);
+  color: #24292e;
+  transform: translateY(-2px);
+}
+
+.contact-link-btn.phone-btn:hover {
+  border-color: var(--accent);
+  background-color: rgba(74, 124, 89, 0.06);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   MOBILE LAYOUT SCALING
+   ========================================================================== */
+@media (max-width: 480px) {
+  .email-copy-box {
+    flex-direction: column;
+    border-radius: 14px;
+    padding: 16px;
+    width: 100%;
+  }
+  .contact-grid {
+    flex-direction: column;
+  }
+  .contact-link-btn {
+    justify-content: center;
+  }
+}
