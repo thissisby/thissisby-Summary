@@ -157,7 +157,6 @@ export default function Home() {
         {/* RIGHT COLUMN: Greetings, bio */}
         <div className="home-right">
           <div className="hero-greetings">Namaste</div>
-          <h1 className="hero-name">{developerInfo.name}</h1>
 
           <p className="hero-introduction">
             I specialize in Platform Engineering, ServiceNow Development, Enterprise Integrations, REST APIs, Workflow Automation, and Java Backend Development. My focus is building scalable solutions that connect systems, streamline business operations, and deliver reliable digital experiences.
