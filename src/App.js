@@ -60,7 +60,6 @@ export default function App() {
 
       <footer className="footer">
         <p>Bhanu Yadav 2004 - 2026</p>
-        <p className="footer-sub">1926-2026 by Nishant Hada</p>
       </footer>
 
       {/* Global Premium Chatbot Widget */}

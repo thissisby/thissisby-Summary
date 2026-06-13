@@ -285,11 +285,15 @@
 
 .hero-greetings {
   font-family: var(--font-display);
-  font-size: clamp(28px, 5.5vw, 44px);
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 2px;
+  font-size: clamp(38px, 7.5vw, 64px);
+  font-weight: 900;
+  background: linear-gradient(135deg, #1b3d25 0%, #4a7c59 50%, #7db68d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
   animation: greetingFloat 4s ease-in-out infinite alternate;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0px 4px 10px rgba(74, 124, 89, 0.1));
 }
 
 @keyframes greetingFloat {
